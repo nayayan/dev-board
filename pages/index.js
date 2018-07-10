@@ -13,7 +13,7 @@ export default class extends React.Component {
         <Head>
           <title>Home</title>
         </Head>
-        <Board/>
+        <Board />
         <style jsx>{styles}</style>
       </Global>
     );
