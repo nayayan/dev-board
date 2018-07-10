@@ -29,6 +29,7 @@
     "next": "^5.1.0",
     "next-routes": "^1.4.1",
     "react": "^16.3.1",
+    "react-beautiful-dnd": "^8.0.2",
     "react-dom": "^16.3.1",
     "styled-jsx": "^2.2.6"
   },
