@@ -11,7 +11,8 @@ export default class extends React.Component {
     return (
       <Global>
         <Head>
-          <title>Home</title>
+          <title>DEV Board</title>
+          <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css"></link>
         </Head>
         <Board />
         <style jsx>{styles}</style>

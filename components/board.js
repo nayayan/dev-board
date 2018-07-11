@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
+import { Card, Icon, Image } from "semantic-ui-react";
 
 import styles from "./board.scss";
 
@@ -117,7 +118,7 @@ export default class Board extends Component {
   // But in this example everything is just done in one place for simplicity
   render() {
     return (
-      <div>
+      <div className="dnd-columns">
         <DragDropContext onDragEnd={this.onDragEnd}>
           <Droppable droppableId="droppable">
             {(provided, snapshot) => (
@@ -141,7 +142,11 @@ export default class Board extends Component {
                           prov.draggableProps.style
                         )}
                       >
-                        {item.content}
+                        <Card>
+                          <Card.Content>
+                            <Card.Description>{item.content}</Card.Description>
+                          </Card.Content>
+                        </Card>
                       </div>
                     )}
                   </Draggable>
@@ -182,6 +187,7 @@ export default class Board extends Component {
             )}
           </Droppable>
         </DragDropContext>
+        <style jsx>{styles}</style>
       </div>
     );
   }
